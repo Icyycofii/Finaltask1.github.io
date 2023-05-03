@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Document</title>
+
+    <style>
+
+        *{
+            font-family: 'poppins';
+        }
+        .bot{
+         
+            font-size: 1.3rem;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(255, 216, 20);
+            color: black;
+            border-radius: 60px;
+            border-color: transparent;
+            text-align: center;
+            
+            
+        }
+
+        #container{
+            display: flex;
+            justify-content: center;            
+        }
+
+        fieldset{
+            border: 5px solid black;
+            width: 50% auto;
+        }
+
+        legend{
+            font-size: 2rem;
+            color:rgb(138, 116, 7); 
+        }
+
+        #res{
+           display: block;
+           width: 200px auto;
+           height: 100px;
+           margin: auto;
+           padding: 30px;
+           text-align: center;
+           font-size: 2rem;
+           font-weight: 1000;
+
+   
+        }
+
+        #buttons{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        input{
+            width: 80%;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            padding: 0 40px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            font-size: 1.2rem;
+
+        }
+        
+
+ 
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <fieldset>
+            <legend>Simple Calculator</legend>
+
+        <div id="inputs-container">
+            <input type="number" id="fnum" placeholder="First Number">
+            <br>
+            <input type="number" id="snum" placeholder="Second Number">
+        </div>
+
+      <br><br>
+
+        <div id="buttons">
+            <button class="bot" onclick="add()">add</button>
+            <button class="bot" onclick="sub()">subtract</button>
+            <button class="bot" onclick="mult()">multiply</button>
+            <button class="bot" onclick="div()">divide</button>
+            <button class="bot" onclick="clr()">Clear</button>
+            <button class="bot" onclick="about()">About</button>
+        </div>
+    <br>
+    <br>
+        <input type="text" name="" id="res" placeholder="Result" disabled readonly="readonlys">
+
+
+
+
+    </fieldset>
+    </div>
+    <script>
+
+        let FirstNum, SecondNum, result;
+        
+
+        function add(){
+            FirstNum = parseInt(document.getElementById("fnum").value);
+            SecondNum = parseInt(document.getElementById("snum").value);
+            result = FirstNum + SecondNum;
+            document.getElementById("res").value=result;
+        }
+
+        function sub(){
+            FirstNum = parseInt(document.getElementById("fnum").value);
+            SecondNum = parseInt(document.getElementById("snum").value);
+            result = FirstNum - SecondNum;
+            document.getElementById("res").value=result;
+        }
+
+        function mult(){
+            FirstNum = parseInt(document.getElementById("fnum").value);
+            SecondNum = parseInt(document.getElementById("snum").value);
+            result = FirstNum * SecondNum;
+            document.getElementById("res").value=result;
+        }
+
+        function div(){
+            FirstNum = parseInt(document.getElementById("fnum").value);
+            SecondNum = parseInt(document.getElementById("snum").value);
+            result = FirstNum / SecondNum;
+            document.getElementById("res").value=result;
+        }
+
+        function clr(){
+          document.getElementById("fnum").value="";
+          document.getElementById("snum").value="";
+      
+            document.getElementById("res").value="";
+        }
+
+        function about(){
+            alert("Work of Mark John Alfonso & Jose Emmanuel Cruz");
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
